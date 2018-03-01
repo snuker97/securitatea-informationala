@@ -29,9 +29,9 @@ document.getElementById('crypt-3-btn').addEventListener('click', () => {
 });
 
 // SI
-document.getElementById('crypt-4-btn').addEventListener('click', () => {
-    hide(document.getElementById('crypt-4-btn'));
-});
+// document.getElementById('crypt-4-btn').addEventListener('click', () => {
+//     hide(document.getElementById('crypt-4-btn'));
+// });
 
 setTimeout(function() {
     for (let i = 0; i < document.getElementsByClassName('indicator').length; i++) {
