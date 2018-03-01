@@ -1,0 +1,53 @@
+/* Grid */
+.grid {
+    background-color: orange;
+    border: 1px solid #FFFFFF;
+}
+
+/* Navigation buttons */
+#navigation {
+    margin: 0 5px 0 -5px;
+}
+
+.navigation-btn {
+    margin: 0 5px;
+}
+
+/* Card */
+.card-position {
+    margin: 0 0 0 -5px;
+}
+
+.card-position-fix {
+    padding: 0 !important;
+}
+
+#crypt-1-crypt {
+    position: relative;
+    text-transform: uppercase;
+}
+
+#crypt-1-crypt-copy,
+#decrypt-1-decrypt-copy,
+#crypt-2-crypt-copy,
+#decrypt-2-decrypt-copy,
+#crypt-3-key-copy,
+#crypt-3-crypt-copy,
+#decrypt-3-decrypt-copy {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+#crypt-1-crypt-copy > i,
+#decrypt-1-decrypt-copy > i,
+#crypt-2-crypt-copy > i,
+#decrypt-2-decrypt-copy > i,
+#crypt-3-key-copy > i,
+#crypt-3-crypt-copy > i,
+#decrypt-3-decrypt-copy > i {
+    color: #fafafa;
+    font-size: 1.25rem;
+}
+
+

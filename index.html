@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Laboratorul Nr.1 - Securitatea Informationala</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="css/vendor/materialize.css"/>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Page content -->
+        <div class="container">
+
+            <!-- Grid -->
+            <div class="row">
+                <div class="col s1 grid">1</div>
+                <div class="col s1 grid">2</div>
+                <div class="col s1 grid">3</div>
+                <div class="col s1 grid">4</div>
+                <div class="col s1 grid">5</div>
+                <div class="col s1 grid">6</div>
+                <div class="col s1 grid">7</div>
+                <div class="col s1 grid">8</div>
+                <div class="col s1 grid">9</div>
+                <div class="col s1 grid">10</div>
+                <div class="col s1 grid">11</div>
+                <div class="col s1 grid">12</div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="row">
+                <div id="navigation">
+                    <a id="crypt-1-btn" class="navigation-btn waves-effect waves-light btn-large green col s2 offset-s2">Cifrul lui Cesar</a>
+                    <a id="crypt-2-btn" class="navigation-btn waves-effect waves-light btn-large green col s2">Cifrul lui BB</a>
+                    <a id="crypt-3-btn" class="navigation-btn waves-effect waves-light btn-large green col s2">Cifrul lui Vernam</a>
+                    <a id="crypt-4-btn" class="navigation-btn waves-effect waves-light btn-large green col s2">Cifrul lui SI</a>
+                </div>
+            </div>
+
+            <!-- Crypts card -->
+
+            <!-- Cesar -->
+            <div id="crypt-1-body" class="row cards" style="padding-top: 50px">
+                <div class="card-position">
+                    <div class="card card-position-fix col s8 offset-s2">
+                        <div class="card-tabs">
+                            <ul class="tabs tabs-fixed-width tabs-transparent green">
+                                <li class="tab"><a class="active" href="#crypt-1-tab">Criptare</a></li>
+                                <li class="tab"><a href="#decrypt-1-tab">Decriptare</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey lighten-5">
+
+                            <!-- Criptarea -->
+                            <div id="crypt-1-tab">
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="crypt-1-text" type="text" class="validate" style="text-transform: uppercase">
+                                        <label for="crypt-1-text">Introduceti mesajul pe care doriti sa-l criptati</label>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 0;">
+                                    <div class="input-field" style="display: inline">
+                                        <div id="crypt-1-direction" class="input-field col s6">
+                                            <select>
+                                                <option value="" disabled selected>Alegeti directia</option>
+                                                <option value="stanga">Stanga</option>
+                                                <option value="dreapta">Dreapta</option>
+                                            </select>
+                                            <label>Directia mutarii dictionarului</label>
+                                        </div>
+                                    </div>
+                                    <form action="#" class="col l6" style="display: inline">
+                                        <p class="range-field">
+                                            <label>Marimea shift-ului</label>
+                                            <input id="crypt-1-shift" type="range" min="0" max="26" style="margin-top: 39px"/>
+                                        </p>
+                                    </form>
+                                </div>
+
+                                <div class="divider" style="margin: 50px 0 30px;"></div>
+
+                                <div class="row">
+                                    <div class="input-field col s12" style="margin-top: 0;">
+                                        <input disabled id="crypt-1-crypt" type="text" class="validate">
+                                        <a id="crypt-1-crypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                        <label for="crypt-1-crypt">Mesajul criptat</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Decriptarea -->
+                            <div id="decrypt-1-tab">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="decrypt-1-text" type="text" class="validate" style="text-transform: uppercase">
+                                        <label for="decrypt-1-text">Introduceti mesajul pe care doriti sa-l decriptati</label>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 0;">
+                                    <div class="input-field" style="display: inline">
+                                        <div id="decrypt-1-direction" class="input-field col s6">
+                                            <select>
+                                                <option value="" disabled selected>Alegeti directia</option>
+                                                <option value="stanga">Stanga</option>
+                                                <option value="dreapta">Dreapta</option>
+                                            </select>
+                                            <label>Directia mutarii dictionarului</label>
+                                        </div>
+                                    </div>
+                                    <form action="#" class="col l6" style="display: inline">
+                                        <p class="range-field">
+                                            <label>Marimea shift-ului</label>
+                                            <input id="decrypt-1-shift" type="range" min="0" max="26" style="margin-top: 39px"/>
+                                        </p>
+                                    </form>
+                                </div>
+
+                                <div class="divider" style="margin: 50px 0 30px;"></div>
+
+                                <div class="row">
+                                    <div class="input-field col s12" style="margin-top: 0;">
+                                        <input disabled id="decrypt-1-decrypt" type="text" class="validate">
+                                        <a id="decrypt-1-decrypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                        <label for="decrypt-1-decrypt">Mesajul decriptat</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- BB -->
+            <div id="crypt-2-body" class="row cards" style="padding-top: 50px">
+                <div class="card-position">
+                    <div class="card card-position-fix col s8 offset-s2">
+                        <div class="card-tabs">
+                            <ul class="tabs tabs-fixed-width tabs-transparent green">
+                                <li class="tab"><a class="active" href="#crypt-2-tab">Criptare</a></li>
+                                <li class="tab"><a href="#decrypt-2-tab">Decriptare</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey lighten-5">
+
+                            <!-- Criptarea -->
+                            <div id="crypt-2-tab">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="crypt-2-text" type="text" class="validate" style="text-transform: uppercase">
+                                        <label for="crypt-2-text">Introduceti mesajul pe care doriti sa-l criptati</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="crypt-2-key" type="number" class="validate" style="text-transform: uppercase;">
+                                        <label for="crypt-2-key" data-error="Numarul de cifre al cheii nu trebuie sa depaseasca numarul de caractere a masejului" data-success="Cheia este valida" style="margin-top: 10px; ">Introduceti cheia pentru criptare ( aceasta nu trebuie sa depaseasca lungimea mesajului )</label>
+                                    </div>
+                                </div>
+
+                                <div class="divider" style="margin: 50px 0 30px;"></div>
+
+                                <div class="row">
+                                    <div class="input-field col s12" style="margin-top: 0;">
+                                        <input disabled id="crypt-2-crypt" type="text" class="validate">
+                                        <a id="crypt-2-crypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                        <label for="crypt-2-crypt">Mesajul criptat</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Decriptarea -->
+                            <div id="decrypt-2-tab">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="decrypt-2-text" type="text" class="validate" style="text-transform: uppercase">
+                                        <label for="decrypt-2-text">Introduceti mesajul pe care doriti sa-l decriptati</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="decrypt-2-key" type="number" class="validate" style="text-transform: uppercase;">
+                                        <label for="decrypt-2-key" data-error="Numarul de cifre al cheii nu trebuie sa depaseasca numarul de caractere a masejului" data-success="Cheia este valida" style="margin-top: 10px; ">Introduceti cheia pentru criptare ( aceasta nu trebuie sa depaseasca lungimea mesajului )</label>
+                                    </div>
+                                </div>
+
+                                <div class="divider" style="margin: 50px 0 30px;"></div>
+
+                                <div class="row">
+                                    <div class="input-field col s12" style="margin-top: 0;">
+                                        <input disabled id="decrypt-2-decrypt" type="text" class="validate">
+                                        <a id="decrypt-2-decrypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                        <label for="decrypt-2-decrypt">Mesajul decriptat</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vernam -->
+                <div id="crypt-3-body" class="row cards" style="padding-top: 50px">
+                    <div class="card-position">
+                        <div class="card card-position-fix col s8 offset-s2">
+                            <div class="card-tabs">
+                                <ul class="tabs tabs-fixed-width tabs-transparent green">
+                                    <li class="tab"><a class="active" href="#crypt-3-tab">Criptare</a></li>
+                                    <li class="tab"><a href="#decrypt-3-tab">Decriptare</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content grey lighten-5">
+                                <div id="crypt-3-tab">
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="crypt-3-text" type="text" class="validate" style="text-transform: uppercase">
+                                            <label for="crypt-3-text">Introduceti mesajul pe care doriti sa-l criptati</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12" style="margin-top: 0;">
+                                            <input disabled id="crypt-3-key" type="text" class="validate">
+                                            <a id="crypt-3-key-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                            <label for="crypt-3-key">Cheia generata</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12" style="margin-top: 0;">
+                                            <input disabled id="crypt-3-crypt" type="text" class="validate">
+                                            <a id="crypt-3-crypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                            <label for="crypt-3-crypt">Mesajul criptat</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="decrypt-3-tab">
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="decrypt-3-text" type="text" class="validate" style="text-transform: uppercase">
+                                            <label for="decrypt-3-text">Introduceti mesajul criptat pe care doriti sa-l decriptati</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="decrypt-3-key" type="text" class="validate" style="text-transform: uppercase">
+                                            <label for="decrypt-3-key">Introduceti cheia mesajului criptat</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12" style="margin-top: 0;">
+                                            <input disabled id="decrypt-3-decrypt" type="text" class="validate">
+                                            <a id="decrypt-3-decrypt-copy" class="btn-floating btn waves-effect waves-light green"><i class="large material-icons" style="">content_copy</i></a>
+                                            <label for="decrypt-3-decrypt">Mesajul decriptat</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SI -->
+                <div id="crypt-4-body" class="row cards" style="padding-top: 50px">
+                    <div class="card-position">
+                        <div class="card card-position-fix col s8 offset-s2">
+                            <div class="card-tabs">
+                                <ul class="tabs tabs-fixed-width tabs-transparent green">
+                                    <li class="tab"><a class="active" href="#crypt-4-tab">Criptare</a></li>
+                                    <li class="tab"><a href="#decrypt-4-tab">Decriptare</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content grey lighten-5">
+                                <div id="crypt-4-tab">
+                                    Criptarea mesajului SI
+                                </div>
+                                <div id="decrypt-4-tab">
+                                    Decriptarea mesajului SI
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <!-- Vendor scripts-->
+        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/vendor/materialize.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('select').material_select();
+            });
+
+            setTimeout(function () {
+                const main = document.createElement('SCRIPT');
+                main.src = 'js/main.js';
+                document.getElementsByTagName('body')[0].appendChild(main);
+
+                const crypt_1_script = document.createElement('SCRIPT');
+                crypt_1_script.src = 'js/crypt/crypt-1-script.js';
+                document.getElementsByTagName('body')[0].appendChild(crypt_1_script);
+
+                const decrypt_1_script = document.createElement('SCRIPT');
+                decrypt_1_script.src = 'js/crypt/decrypt-1-script.js';
+                document.getElementsByTagName('body')[0].appendChild(decrypt_1_script);
+
+                const crypt_2_script = document.createElement('SCRIPT');
+                crypt_2_script.src = 'js/crypt/crypt-2-script.js';
+                document.getElementsByTagName('body')[0].appendChild(crypt_2_script);
+
+                const decrypt_2_script = document.createElement('SCRIPT');
+                decrypt_2_script.src = 'js/crypt/decrypt-2-script.js';
+                document.getElementsByTagName('body')[0].appendChild(decrypt_2_script);
+
+                const crypt_3_script = document.createElement('SCRIPT');
+                crypt_3_script.src = 'js/crypt/crypt-3-script.js';
+                document.getElementsByTagName('body')[0].appendChild(crypt_3_script);
+
+                const decrypt_3_script = document.createElement('SCRIPT');
+                decrypt_3_script.src = 'js/crypt/decrypt-3-script.js';
+                document.getElementsByTagName('body')[0].appendChild(decrypt_3_script);
+            }, 100);
+        </script>
+    </body>
+</html>
