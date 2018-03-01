@@ -71,7 +71,9 @@ const crypt_2_text_fn = () => {
     for (let i = 0; i < cryptToTextChar.length; i++) {
         let keyPosition = i % crypt_2_key.length;
 
-        cryptOutputText += String.fromCharCode(+(cryptToTextChar[i]) + +(crypt_2_key[keyPosition]) + 65);
+        let number = +(cryptToTextChar[i]) + +(crypt_2_key[keyPosition]) + 65 > 90 ? +(cryptToTextChar[i]) + +(crypt_2_key[keyPosition]) + 65 - 26 : +(cryptToTextChar[i]) + +(crypt_2_key[keyPosition]) + 65;
+
+        cryptOutputText += String.fromCharCode(number);
     }
 
     console.log(cryptOutputText);
